@@ -74,16 +74,5 @@ form input{
   border-radius: 10px;
   background-color: #fff;
 
-}
-form button{
-width: 100%;
-border-radius: 10px;
-background-color:#555;
-border: none;
-padding: 10px;
-color: white;
-cursor: pointer;
-}
-form h1{
-  text-align: center;
+
 }
