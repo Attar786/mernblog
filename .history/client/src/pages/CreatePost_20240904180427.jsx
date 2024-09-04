@@ -2,7 +2,6 @@ import { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Navigate } from "react-router-dom";
-
 const modules = {
   toolbar: [
     [{ header: [1, 2, false] }],
@@ -25,7 +24,8 @@ const CreatePost = () => {
   const [summary, setSummary] = useState('');
   const [content, setContent] = useState('');
   const [files, setFiles] = useState([]); 
-  const [redirect, setRedirect] = useState(false); // Initialize as boolean
+  const [redirect, setRedirect] = useState('false');
+  // Initialize as an empty array
 
   async function createNewPost(ev) {
     ev.preventDefault();
@@ -50,10 +50,10 @@ const CreatePost = () => {
       console.error('Failed to create post');
     }
   }
-
-  if (redirect) {
-    return <Navigate to={'/'} />;
-  }
+  if(redirect)
+    {
+      <Navigate to={'/'}/>
+    }
 
   return (
     <form onSubmit={createNewPost}>
